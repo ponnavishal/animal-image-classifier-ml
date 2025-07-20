@@ -10,7 +10,7 @@ from tensorflow.keras.preprocessing.image import img_to_array
 # -----------------------------
 # Load Trained Model & Encoder
 # -----------------------------
-clf = joblib.load("resnet_rf_model.pkl")
+clf = joblib.load("model.pkl")
 le = joblib.load("label_encoder.pkl")
 
 # Load ResNet50 model
