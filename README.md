@@ -1,4 +1,6 @@
 <img width="1380" height="1008" alt="image" src="https://github.com/user-attachments/assets/0f169192-067a-4a04-b95a-3d19d8404abd" />Dataset Used from kaggle:https://www.kaggle.com/datasets/alessiocorrado99/animals10
+
+
  🐾 Animal Image Classifier using Traditional Machine Learning
 
 
