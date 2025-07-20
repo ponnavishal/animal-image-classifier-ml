@@ -1,3 +1,4 @@
+Dataset Used from kaggle:https://www.kaggle.com/datasets/alessiocorrado99/animals10
 # animal-image-classifier-ml
 A machine learning model that classifies animal images using traditional ML techniques like HOG, LBP, and Color Histograms, trained on a Random Forest Classifier with PCA. All features are extracted using OpenCV and custom code
 # 🐾 Animal Image Classifier using Traditional ML
