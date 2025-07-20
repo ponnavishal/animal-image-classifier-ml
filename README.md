@@ -1,23 +1,159 @@
 Dataset Used from kaggle:https://www.kaggle.com/datasets/alessiocorrado99/animals10
-# animal-image-classifier-ml
-A machine learning model that classifies animal images using traditional ML techniques like HOG, LBP, and Color Histograms, trained on a Random Forest Classifier with PCA. All features are extracted using OpenCV and custom code
-# 🐾 Animal Image Classifier using Traditional ML
+ 🐾 Animal Image Classifier using Traditional Machine Learning
 
-This project builds a machine learning model to classify animal images using handcrafted features like HOG (shape), LBP (texture), and Color Histograms. It uses a Random Forest classifier and Principal Component Analysis (PCA) for dimensionality reduction.
+An end-to-end machine learning pipeline that classifies animals using handcrafted features (HOG + LBP), PCA for dimensionality reduction, and Random Forest for prediction — deployed with a user-friendly Flask web interface.
+## 📋 Table of Contents
+- [📖 Project Overview](#-project-overview)
+- [✨ Key Features](#-key-features)
+- [🛠️ Technology Stack](#️-technology-stack)
+- [📂 Project Structure](#-project-structure)
+- [📁 Dataset Structure](#-dataset-structure)
+- [🚀 Setup and Installation](#-setup-and-installation)
+- [⚙️ Execution Workflow](#️-execution-workflow)
+- [🌐 Deployment](#-deployment)
+- [🤝 Contributing](#-contributing)
+- [📜 License](#-license)
+- [👨‍💻 Author](#-author)
 
-## 🔍 Features Extracted
-- **HOG (Histogram of Oriented Gradients)** – shape and edges
-- **LBP (Local Binary Pattern)** – texture features (custom implemented)
-- **Color Histograms** – color distribution across RGB channels
+---
 
-## 🧠 Model Used
-- **Random Forest Classifier**
-- **PCA** for dimensionality reduction
-- **Label Encoder** for class labels
+## 📖 Project Overview
 
-## 🧪 Evaluation
-- Accuracy and classification report are generated on test data
-- Confusion matrix for visualizing performance
+This project aims to classify images of animals such as cats, dogs, butterflies, and more using traditional machine learning methods rather than deep learning. The model extracts handcrafted features (HOG and LBP), reduces dimensions using PCA, and classifies images using a Random Forest Classifier.
+
+The final model is served through a **Flask web app**, where users can upload an image and get a prediction instantly.
+
+---
+
+## ✨ Key Features
+
+| Feature | Description |
+|--------|-------------|
+| 🧠 Feature Engineering | Extracts HOG (Histogram of Oriented Gradients) and LBP (Local Binary Pattern) features |
+| 🔻 PCA | Dimensionality reduction for faster training and better generalization |
+| 🌲 Random Forest Classifier | Trained to classify animal images |
+| 🧪 Evaluation Report | Classification report with accuracy, precision, recall, F1-score |
+| 🌐 Flask App | Upload an image and get prediction instantly |
+| 💾 Model Persistence | Saves trained models using `joblib` |
+| 📦 Modular Code | Clean structure following best practices |
+
+---
+
+## 🛠️ Technology Stack
+
+- **Language**: Python
+- **Libraries**: NumPy, OpenCV, scikit-learn, joblib
+- **Web Framework**: Flask
+- **Visualization**: Matplotlib, Seaborn (optional for analysis)
+- **Frontend**: HTML5, Bootstrap (for simple UI)
+- **Deployment**: Localhost / Render / Railway (optional)
+
+---
+
+## 📂 Project Structure
+
+```bash
+animal-image-classifier/
+│
+├── static/                   # Stores uploaded images
+│
+├── templates/                # HTML templates for Flask
+│   └── index.html
+│
+├── dataset/                  # Contains the image dataset
+│   ├── cat/
+│   ├── dog/
+│   └── ...
+│
+├── trained_models/           # Contains saved .pkl models
+│   ├── rf_model.pkl
+│   ├── pca_model.pkl
+│   └── label_encoder.pkl
+│
+├── app.py                    # Flask app
+├── feature_extraction.py     # Contains HOG + LBP feature logic
+├── model_training.py         # Trains RandomForest + PCA
+├── utils.py                  # Helper functions (e.g., image pre-processing)
+├── requirements.txt
+└── README.md
+📁 Dataset Structure
+Organized in this way:
+
+bash
+Copy
+Edit
+dataset/
+├── cat/
+│   ├── cat1.jpg
+│   ├── cat2.jpg
+│   └── ...
+├── dog/
+├── butterfly/
+├── chicken/
+└── ...
+Each folder name becomes a class label, and the images inside are used for training/testing.
+
+🚀 Setup and Installation
+🔧 Prerequisites
+Python 3.7+
+
+pip
+
+virtualenv (optional but recommended)
+
+💻 Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/your-username/animal-image-classifier.git
+cd animal-image-classifier
+📦 Install Dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+⚙️ Execution Workflow
+🔸 Step 1: Train the Model
+bash
+Copy
+Edit
+python model_training.py
+This will:
+
+Load dataset
+
+Extract HOG + LBP features
+
+Encode labels
+
+Apply PCA
+
+Train RandomForest
+
+Save models using joblib
+
+🔸 Step 2: Launch Flask App
+bash
+Copy
+Edit
+python app.py
+Navigate to http://localhost:5000/ and upload an image to test.
+
+🌐 Deployment
+You can deploy using streamlit
+Streamlit (if converted to Streamlit)
+
+🤝 Contributing
+Contributions, issues and feature requests are welcome!
+Feel free to check the issues page.
+
+📜 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+👨‍💻 Author
+ponna vishal
+GitHub | LinkedIn
+
 
 ## 🗂️ Dataset Structure
 Your dataset folder should look like this:
