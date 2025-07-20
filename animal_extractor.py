@@ -69,7 +69,7 @@ clf = RandomForestClassifier(n_estimators=100, random_state=42)
 clf.fit(X_train, y_train)
 
 # Save the model
-joblib.dump(clf, "resnet_rf_model.pkl")
+joblib.dump(clf, "model.pkl")
 joblib.dump(le, "label_encoder.pkl")
 
 # -----------------------------
