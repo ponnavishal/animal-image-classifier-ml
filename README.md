@@ -1,5 +1,6 @@
-Dataset Used from kaggle:https://www.kaggle.com/datasets/alessiocorrado99/animals10
+<img width="1380" height="1008" alt="image" src="https://github.com/user-attachments/assets/0f169192-067a-4a04-b95a-3d19d8404abd" />Dataset Used from kaggle:https://www.kaggle.com/datasets/alessiocorrado99/animals10
  🐾 Animal Image Classifier using Traditional Machine Learning
+
 
 An end-to-end machine learning pipeline that classifies animals using handcrafted features (HOG + LBP), PCA for dimensionality reduction, and Random Forest for prediction — deployed with a user-friendly Flask web interface.
 ## 📋 Table of Contents
