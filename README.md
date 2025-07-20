@@ -33,7 +33,7 @@ The final model is served through a **Flask web app**, where users can upload an
 | 🔻 PCA | Dimensionality reduction for faster training and better generalization |
 | 🌲 Random Forest Classifier | Trained to classify animal images |
 | 🧪 Evaluation Report | Classification report with accuracy, precision, recall, F1-score |
-| 🌐 Flask App | Upload an image and get prediction instantly |
+| 🌐 streamlit App | Upload an image and get prediction instantly |
 | 💾 Model Persistence | Saves trained models using `joblib` |
 | 📦 Modular Code | Clean structure following best practices |
 
@@ -43,10 +43,9 @@ The final model is served through a **Flask web app**, where users can upload an
 
 - **Language**: Python
 - **Libraries**: NumPy, OpenCV, scikit-learn, joblib
-- **Web Framework**: Flask
+- **Web Framework**: streamlit
 - **Visualization**: Matplotlib, Seaborn (optional for analysis)
-- **Frontend**: HTML5, Bootstrap (for simple UI)
-- **Deployment**: Localhost / Render / Railway (optional)
+- **Deployment**: Localhost / streamlit / Railway (optional)
 
 ---
 
